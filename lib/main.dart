@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:meditest/screens/home_screen.dart';
-import 'package:meditest/services/api_service.dart';
+import 'package:meditest/screens/json_screen.dart';
 
 void main() {
-  ApiService.getTodaysToons();
-  runApp(const App());
+  //WidgetsFlutterBinding.ensureInitialized();
+  //ApiService.getTodaysToons();
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
+    return const MaterialApp(
+      home: JsonScreen(),
     );
   }
 }
